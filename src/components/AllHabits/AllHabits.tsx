@@ -9,19 +9,22 @@ import AllHabitsRightSideBar from '../RightSideBar/AllHabitsRightSideBar'
 import { useGlobalContextProvider } from '@/contextAPI'
 import { darkModeColor, defaultColor } from '../../../color'
 import HabitWindow from './HabitWindow'
+import {Toaster} from "react-hot-toast"
+import AreasContainer from './AreasContainer'
 
 
 const AllHabits = () => {
     return (
         <div className="max-lg:flex-col w-full flex flex-row gap-0 relative">
+            <Toaster />
             <HabitWindow/>
             <div className="flex-col flex-grow m-3">
                 <AllHabitsTopBar />
+                <AreasContainer/>
                 <HabitsContainer />
                 <HabitsCompleted />
             </div>
 
-            {/* <RightSideBar /> */}
             <AllHabitsRightSideBar />
         </div>
     )
